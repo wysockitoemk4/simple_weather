@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
       child: BlocListener<HomeCubit, HomeState>(
         listener: (context, state) {
           if (state.status == Status.error) {
-            final errorMessage = state.errorMessage ?? 'Unkown error';
+            final errorMessage = state.errorMessage ?? 'Unknown error';
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(errorMessage),
